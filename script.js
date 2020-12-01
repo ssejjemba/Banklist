@@ -54,3 +54,15 @@ message.style.height =
 // Attributes
 const logo = document.querySelector('.nav__logo');
 logo.alt = 'Beautiful minimalist logo';
+
+// Implementing smooth scroll
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.getElementById('section--1');
+btnScrollTo.addEventListener('click', function (e) {
+  const s1cords = section1.getBoundingClientRect();
+  window.scrollTo({
+    left: s1cords.left + window.pageXOffset,
+    top: s1cords.top + window.pageYOffset,
+    behavior: 'smooth',
+  });
+});
