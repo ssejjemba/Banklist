@@ -59,10 +59,11 @@ logo.alt = 'Beautiful minimalist logo';
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.getElementById('section--1');
 btnScrollTo.addEventListener('click', function (e) {
-  const s1cords = section1.getBoundingClientRect();
-  window.scrollTo({
-    left: s1cords.left + window.pageXOffset,
-    top: s1cords.top + window.pageYOffset,
-    behavior: 'smooth',
-  });
+  // const s1cords = section1.getBoundingClientRect();
+  // window.scrollTo({
+  //   left: s1cords.left + window.pageXOffset,
+  //   top: s1cords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+  section1.scrollIntoView({ behavior: 'smooth' });
 });
