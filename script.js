@@ -36,7 +36,7 @@ message.classList.add('cookie-message');
 message.innerHTML =
   'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
 const header = document.querySelector('.header');
-header.append(message);
+header.after(message);
 
 // Deleting elements in the DOM
 document
@@ -44,3 +44,9 @@ document
   .addEventListener('click', function () {
     message.remove();
   });
+
+// styles
+message.style.backgroundColor = '#37383d';
+message.style.width = '100%';
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
