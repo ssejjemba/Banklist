@@ -50,3 +50,7 @@ message.style.backgroundColor = '#37383d';
 message.style.width = '100%';
 message.style.height =
   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+
+// Attributes
+const logo = document.querySelector('.nav__logo');
+logo.alt = 'Beautiful minimalist logo';
